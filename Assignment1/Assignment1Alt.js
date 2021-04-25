@@ -143,7 +143,7 @@ function sha(str)
         ha[7] = sa(ha[7], h);
     }
 
-    let digest = parseInt(ha[0], 2).toString(16) + parseInt(ha[1], 2).toString(16) + parseInt(ha[2], 2).toString(16) + parseInt(ha[3], 2).toString(16) + parseInt(ha[4], 2).toString(16) + parseInt(ha[5], 2).toString(16) + parseInt(ha[6], 2).toString(16) + parseInt(ha[7], 2).toString(16);
+    let digest = parseInt(ha[0], 2).toString(16).padStart(8,'0') + parseInt(ha[1], 2).toString(16).padStart(8,'0') + parseInt(ha[2], 2).toString(16).padStart(8,'0')  + parseInt(ha[3], 2).toString(16).padStart(8,'0')  + parseInt(ha[4], 2).toString(16).padStart(8,'0')  + parseInt(ha[5], 2).toString(16).padStart(8,'0')  + parseInt(ha[6], 2).toString(16).padStart(8,'0')  + parseInt(ha[7], 2).toString(16).padStart(8,'0') ;
     digest = digest.toUpperCase();
     return digest;
 }
